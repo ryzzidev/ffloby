@@ -1,0 +1,131 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ryzzi - Fake Lobby FF</title>
+    <link rel="icon" type="image/jpg" href="https://files.catbox.moe/eoyme6.jpg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#111628">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+
+        <header class="header">
+            <div class="header-left">
+                <div class="header-icon"><i class="ri-flashlight-fill"></i></div>
+                <div class="header-title">RYZ<span>FF LOBY</span></div>
+            </div>
+            <div class="header-right">
+                <button class="btn-icon" id="btnInfo" onclick="openModal()"><i class="ri-information-line"></i></button>
+            </div>
+        </header>
+
+        <main class="content" id="mainContent">
+
+            <div class="video-banner">
+                <video autoplay muted loop playsinline>
+                    <source src="https://c.termai.cc/v106/uwnywQx.mp4" type="video/mp4">
+                </video>
+                <span class="badge-top"><i class="ri-vidicon-fill"></i> Ryzzi</span>
+                <span class="badge-video"><i class="ri-video-line"></i> FREE FIRE</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon"><i class="ri-gamepad-fill"></i></div>
+                    <h3>Fake Lobby FF <small>Free Fire Generator</small></h3>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="ri-user-3-fill"></i> Nickname</label>
+                    <input type="text" id="lobbyNick" placeholder="Masukkan nickname..." value="Ryzzi">
+                </div>
+
+                <button class="btn-generate" id="generateBtn" onclick="generateLobby()">
+                    <i class="ri-flashlight-fill"></i>
+                    <span class="btn-text">Generate Lobby</span>
+                    <i class="ri-loader-4-line loader"></i>
+                </button>
+            </div>
+
+            <div class="card result-card" id="resultCard">
+                <div class="card-header">
+                    <div class="icon"><i class="ri-image-2-fill"></i></div>
+                    <h3>Hasil Lobby <small>Free Fire</small></h3>
+                </div>
+                <div class="preview-container" id="previewContainer">
+                    <div class="preview-placeholder">
+                        <i class="ri-image-line"></i>
+                        <p>Klik Generate untuk membuat lobby</p>
+                    </div>
+                </div>
+                <div id="downloadWrapper"></div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="ri-rocket-2-fill"></i>
+                    <h6>Super Cepat</h6>
+                    <p>Generate dalam detik</p>
+                </div>
+                <div class="feature">
+                    <i class="ri-save-3-fill"></i>
+                    <h6>Simpan Gambar</h6>
+                    <p>Download hasilnya</p>
+                </div>
+                <div class="feature">
+                    <i class="ri-open-arm-fill"></i>
+                    <h6>Gratis Selamanya</h6>
+                    <p>Tanpa batasan</p>
+                </div>
+            </div>
+
+            <div class="promo">
+                <h4>Ryz FF loby</h4>
+                <p>Buat screenshot lobby FF dengan nickname custom</p>
+                <i class="ri-tools-line"></i>
+            </div>
+
+            <div class="footer">
+                created<i class="ri-heart-fill"></i> by <strong>Ryzzi</strong>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="fab">
+        <button onclick="scrollToTop()"><i class="ri-arrow-up-line"></i></button>
+    </div>
+
+    <div class="toast" id="toast">
+        <i class="ri-checkbox-circle-fill"></i>
+        <span id="toastMsg">Berhasil!</span>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-sheet">
+            <div class="handle"></div>
+            <div class="modal-title">ℹ️ Tentang</div>
+            <div class="modal-body">
+                <i class="ri-tools-line"></i>
+                <h4>Ryz FF loby</h4>
+                <p>
+                    <strong>Fake Lobby Free Fire</strong><br>
+                    Buat screenshot lobby FF dengan nickname custom.<br><br>
+                    Hasil bisa di-download sebagai gambar PNG.<br><br>
+                    Created by <strong>Ryzzi</strong>
+                </p>
+            </div>
+            <button class="btn-close-modal" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
